@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DGARENDER</title>
+  <meta name="description" content="DGARENDER - planos y renders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Íconos (genéricos, de trazo). Se usan con <svg class="icon"><use href="#i-..."/></svg> -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14"/>
+      <path d="M3 7l9 6 9-6"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M4 4h16v12H10l-5 4v-4H4z"/>
+      <path d="M8 9h8M8 12h5"/>
+    </symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24">
+      <path d="M3 8h4l2-3h6l2 3h4v11H3z"/>
+      <circle cx="12" cy="13" r="3.5"/>
+    </symbol>
+    <symbol id="i-card" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="12"/>
+      <path d="M3 10h18M6.5 15h4"/>
+    </symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24">
+      <rect x="4" y="8" width="16" height="11"/>
+      <path d="M4 8l11-3.5V8"/>
+      <circle cx="16" cy="13.5" r="1"/>
+    </symbol>
+  </svg>
+
+  <div class="page" id="top">
+
+    <!-- 1. HEADER -->
+    <header class="panel site-header">
+      <a class="brand" href="#top" aria-label="DGARENDER"><span class="brand-dga">DGA</span><span class="brand-render">RENDER</span></a>
+      <nav class="contact-nav" aria-label="Contacto">
+        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>WhatsApp</span></a>
+        <a href="mailto:contacto@dgarender.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>Email</span></a>
+        <a href="https://instagram.com/dgarender" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg><span>Instagram</span></a>
+      </nav>
+    </header>
+
+    <!-- 2. BANNER (80% de la altura de la pantalla) -->
+    <section class="banner ph" data-label="Banner (img/banner.jpg)" aria-label="Banner">
+      <img src="img/banner.jpg" alt="Banner DGARENDER" data-fallback>
+    </section>
+
+    <!-- 3. ¿NECESITÁS UN PLANO? (tarjetas a la izquierda, título + texto a la derecha) -->
+    <section class="panel" id="plano">
+      <div class="split split--side-right split--cards">
+        <div class="split-main">
+          <div class="cards-2">
+            <article class="card case-card">
+              <h3>Caso 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </article>
+            <article class="card case-card">
+              <h3>Caso 2</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            </article>
+          </div>
+        </div>
+        <div class="split-side">
+          <h2 class="section-title">¿Necesitás un plano?</h2>
+          <p class="side-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FORMATOS QUE OFRECEMOS + MÉTODOS DE PAGO (título + texto a la izquierda, tarjetas a la derecha) -->
+    <section class="panel" id="formatos">
+      <div class="split split--side-left split--cards">
+        <div class="split-main">
+          <div class="cards-2">
+            <article class="card format-card">
+              <div class="card-media ph" data-label="Formato 1">
+                <img src="img/formato-1.jpg" alt="Formato 1" data-fallback>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span class="price">$ 00.000</span>
+            </article>
+            <article class="card format-card">
+              <div class="card-media ph" data-label="Formato 2">
+                <img src="img/formato-2.jpg" alt="Formato 2" data-fallback>
+              </div>
+              <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              <span class="price">$ 00.000</span>
+            </article>
+          </div>
+        </div>
+        <div class="split-side">
+          <h2 class="section-title">Formatos que ofrecemos</h2>
+          <p class="side-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+        </div>
+      </div>
+
+      <div class="pay-block" id="pagos">
+        <h3>Métodos de pago</h3>
+        <p class="section-intro">Aceptamos los siguientes medios de pago:</p>
+        <ul class="pay-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Mercado Pago</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg>PayPal</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. ALGUNOS DE MIS TRABAJOS (carrusel + tarjeta superpuesta con título y descripción) -->
+    <section class="panel" id="trabajos">
+      <div class="split split--side-right split--overlap">
+
+        <div class="split-main">
+          <div class="carousel" data-carousel tabindex="0" aria-roledescription="carrusel" aria-label="Galería de trabajos">
+            <div class="carousel-track">
+              <figure class="carousel-slide ph" data-label="Trabajo 1">
+                <img src="img/trabajo-1.jpg" alt="Trabajo 1" data-fallback>
+              </figure>
+              <figure class="carousel-slide ph" data-label="Trabajo 2">
+                <img src="img/trabajo-2.jpg" alt="Trabajo 2" data-fallback>
+              </figure>
+              <figure class="carousel-slide ph" data-label="Trabajo 3">
+                <img src="img/trabajo-3.jpg" alt="Trabajo 3" data-fallback>
+              </figure>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-btn prev" type="button" aria-label="Imagen anterior">&#8249;</button>
+              <div class="carousel-dots" role="group" aria-label="Elegir imagen"></div>
+              <button class="carousel-btn next" type="button" aria-label="Imagen siguiente">&#8250;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-side">
+          <h2 class="section-title">Algunos de mis trabajos</h2>
+          <div class="works-text" aria-live="polite">
+            <article class="work-text">
+              <h3>Trabajo 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </article>
+            <article class="work-text" hidden>
+              <h3>Trabajo 2</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </article>
+            <article class="work-text" hidden>
+              <h3>Trabajo 3</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. FOOTER / CONTACTO -->
+    <footer class="panel site-footer" id="contacto">
+      <div class="footer-top">
+        <h2 class="footer-title">Ante cualquier consulta, enviala a mi email o número de WhatsApp</h2>
+        <ul class="footer-info">
+          <li>
+            <span><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</span>
+            <a href="mailto:contacto@dgarender.com">contacto@dgarender.com</a>
+          </li>
+          <li>
+            <span><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</span>
+            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>También podés encontrarme en...</h3>
+        <a class="social-link" href="https://instagram.com/dgarender" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>Instagram &middot; @dgarender</a>
+      </div>
+
+      <p class="copyright">&copy; <span id="year"></span> DGARENDER. Todos los derechos reservados.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
