@@ -70,8 +70,14 @@
       animating = false;
     }
 
+    // Al cambiar de slide se pausan los videos (incluidas las copias del bucle)
+    function pauseVideos() {
+      track.querySelectorAll('video').forEach(function (v) { v.pause(); });
+    }
+
     function move(newIndex) {
       if (animating) return;
+      pauseVideos();
       animating = true;
       index = newIndex;
       setPosition(true);
@@ -91,16 +97,26 @@
 
     // Teclado
     carousel.addEventListener('keydown', function (e) {
+      // Con el foco en un video, las flechas son para adelantar/retroceder el video
+      if (e.target.closest('video')) return;
       if (e.key === 'ArrowLeft') move(index - 1);
       if (e.key === 'ArrowRight') move(index + 1);
     });
 
     // Swipe en pantallas táctiles
     let startX = 0;
+    let ignoreSwipe = false;
     carousel.addEventListener('touchstart', function (e) {
+      // Un gesto sobre la barra de controles de un video no cambia de slide
+      const video = e.target.closest('video');
+      ignoreSwipe = false;
+      if (video) {
+        ignoreSwipe = e.touches[0].clientY > video.getBoundingClientRect().bottom - 64;
+      }
       startX = e.touches[0].clientX;
     }, { passive: true });
     carousel.addEventListener('touchend', function (e) {
+      if (ignoreSwipe) return;
       const dx = e.changedTouches[0].clientX - startX;
       if (Math.abs(dx) > 40) move(dx < 0 ? index + 1 : index - 1);
     }, { passive: true });
@@ -114,6 +130,22 @@
     function hide() { img.classList.add('is-missing'); }
     img.addEventListener('error', hide);
     if (img.complete && img.naturalWidth === 0) hide();
+  });
+
+  /* ---------- Fallback si un video no se puede reproducir (p. ej. .avi) ---------- */
+  document.querySelectorAll('video[data-fallback]').forEach(function (video) {
+    function hide() { video.classList.add('is-missing'); }
+    // NETWORK_NO_SOURCE (3) sin datos: el navegador descartó todas las <source>
+    function check() {
+      if (video.networkState === 3 && video.readyState === 0) hide();
+    }
+    video.addEventListener('error', hide);
+    const sources = video.querySelectorAll('source');
+    // El error de la última <source> significa que ninguna opción funcionó
+    if (sources.length) sources[sources.length - 1].addEventListener('error', hide);
+    // El error puede haber ocurrido antes de que cargue este script: se revisa también al terminar de cargar
+    check();
+    window.addEventListener('load', function () { setTimeout(check, 300); });
   });
 
   /* ---------- Año del footer ---------- */

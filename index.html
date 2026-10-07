@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DGARENDER</title>
-  <meta name="description" content="DGARENDER - planos y renders.">
+  <title>DGA PLANOS</title>
+  <meta name="description" content="DGA PLANOS - diseño de planos para inmobiliarias.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -35,93 +35,134 @@
       <path d="M4 8l11-3.5V8"/>
       <circle cx="16" cy="13.5" r="1"/>
     </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="5" y="11" width="14" height="9"/>
+      <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15M13 6l6 6-6 6"/>
+    </symbol>
   </svg>
 
   <div class="page" id="top">
 
     <!-- 1. HEADER -->
     <header class="panel site-header">
-      <a class="brand" href="#top" aria-label="DGARENDER"><span class="brand-dga">DGA</span><span class="brand-render">RENDER</span></a>
+      <a class="brand" href="#top" aria-label="DGA PLANOS - inicio">
+        <img src="assets/logo.png" alt="DGA PLANOS" width="300" height="300">
+      </a>
       <nav class="contact-nav" aria-label="Contacto">
-        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>WhatsApp</span></a>
-        <a href="mailto:contacto@dgarender.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>Email</span></a>
-        <a href="https://instagram.com/dgarender" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg><span>Instagram</span></a>
+        <a href="https://wa.me/5491165636172" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>WhatsApp</span></a>
+        <a href="mailto:diegogabrielalfaro@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>Email</span></a>
+        <a href="https://instagram.com/dgaplanos" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg><span>Instagram</span></a>
       </nav>
     </header>
 
-    <!-- 2. BANNER (80% de la altura de la pantalla) -->
-    <section class="banner ph" data-label="Banner (img/banner.jpg)" aria-label="Banner">
-      <img src="img/banner.jpg" alt="Banner DGARENDER" data-fallback>
+    <!-- 2. BANNER / HERO (80% de la altura de la pantalla, texto animado sobre la foto) -->
+    <section class="hero" aria-label="Presentación">
+      <div class="hero-media ph bw" data-label="Banner (img/banner.jpg)">
+        <img src="assets/3.jpg" alt="" data-fallback>
+      </div>
+      <div class="hero-content">
+        <div class="hero-box">
+          <p class="kicker">DGA PLANOS</p>
+          <h1 class="hero-title">Diseño de <span class="hl">planos</span> para inmobiliarias</h1>
+          <a class="btn" href="#contacto">Pedí tu plano <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
     </section>
 
-    <!-- 3. ¿NECESITÁS UN PLANO? (tarjetas a la izquierda, título + texto a la derecha) -->
+    <!-- 3. ¿NECESITÁS UN PLANO? (título principal; engloba "Cómo trabajamos" y "Formatos que ofrecemos") -->
     <section class="panel" id="plano">
-      <div class="split split--side-right split--cards">
-        <div class="split-main">
-          <div class="cards-2">
-            <article class="card case-card">
-              <h3>Caso 1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            </article>
-            <article class="card case-card">
-              <h3>Caso 2</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-            </article>
-          </div>
+
+      <!-- Cabecera en collage: foto + rectángulo blanco (título) + rectángulo rojo (texto) -->
+      <div class="plano-head">
+        <div class="plano-photo ph bw" data-label="Foto principal (img/plano.jpg)">
+          <img src="assets/dga-OO5.png" alt="" data-fallback>
         </div>
-        <div class="split-side">
-          <h2 class="section-title">¿Necesitás un plano?</h2>
-          <p class="side-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        <div class="plano-title rect-white">
+          <p class="kicker">Planos para inmobiliarias</p>
+          <h2 class="display">¿Necesitás un <span class="hl">plano</span>?</h2>
+        </div>
+        <div class="plano-lede rect-red">
+          <p>Me dedico al diseño de planos para inmobiliarias, ofreciendo soluciones precisas y profesionales. Trabajo con AutoCad desde hace 30 años y estoy familiarizado con los estándares de calidad requeridos en el sector. Ante cualquier consulta o necesidad específica, no dudes en contactarme.</p>
+        </div>
+      </div>
+
+      <!-- Cómo trabajamos: casos sin fondo, diferenciados por número y línea roja -->
+      <div class="how" id="como-trabajamos">
+        <h3 class="subtitle">Cómo trabajo</h3>
+        <div class="cases">
+          <article class="case">
+            <span class="case-num" aria-hidden="true">01</span>
+            <h4>Tenés un plano a mano alzada</h4>
+            <p>Si tenés un plano con medidas acotadas pero preferirías un diseño más prolijo, envialo a mi contacto sin problema.</p>
+          </article>
+          <article class="case">
+            <span class="case-num" aria-hidden="true">02</span>
+            <h4>Necesitás que vaya a medir</h4>
+            <p>Te ponés en contacto conmigo para relevar la vivienda, a partir de los datos obtenidos se realiza la digitalización. CONSULTAR ZONAS DISPONIBLES</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Formatos que ofrecemos (estilo tienda) + métodos de pago -->
+      <div class="formats" id="formatos">
+        <h3 class="subtitle">Formatos que ofrezco</h3>
+        <p class="lede">Elegí el formato que mejor se adapte a tu propiedad y pedilo en un par de clics.</p>
+
+        <div class="shop-grid">
+          <article class="product rect-white">
+            <div class="product-media ph" data-label="Formato 1">
+              <img src="assets/3.jpg" alt="Formato 1" data-fallback>
+            </div>
+            <div class="product-body">
+              <h4 class="product-name">Plano Clásico</h4>
+              <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="product-foot">
+                <span class="price"><small>Precio</small>$ 00.000</span>
+                <a class="btn btn-sm" href="https://wa.me/5491165636172?text=Hola%2C%20quiero%20pedir%20el%20Formato%201" target="_blank" rel="noopener">Pedir <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product rect-white">
+            <div class="product-media ph" data-label="Formato 2">
+              <img src="assets/3d.jpg" alt="Formato 2" data-fallback>
+            </div>
+            <div class="product-body">
+              <h4 class="product-name">Plano Vista 3D</h4>
+              <p class="product-desc">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              <div class="product-foot">
+                <span class="price"><small>Precio</small>$ 00.000</span>
+                <a class="btn btn-sm" href="https://wa.me/5491165636172?text=Hola%2C%20quiero%20pedir%20el%20Formato%202" target="_blank" rel="noopener">Pedir <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="pay-block rect-red" id="pagos">
+          <div class="pay-head">
+            <h4><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Métodos de pago</h4>
+            <p>Pagá de forma segura con:</p>
+          </div>
+          <ul class="pay-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Mercado Pago</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg>PayPal</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- 4. FORMATOS QUE OFRECEMOS + MÉTODOS DE PAGO (título + texto a la izquierda, tarjetas a la derecha) -->
-    <section class="panel" id="formatos">
-      <div class="split split--side-left split--cards">
-        <div class="split-main">
-          <div class="cards-2">
-            <article class="card format-card">
-              <div class="card-media ph" data-label="Formato 1">
-                <img src="img/formato-1.jpg" alt="Formato 1" data-fallback>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <span class="price">$ 00.000</span>
-            </article>
-            <article class="card format-card">
-              <div class="card-media ph" data-label="Formato 2">
-                <img src="img/formato-2.jpg" alt="Formato 2" data-fallback>
-              </div>
-              <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-              <span class="price">$ 00.000</span>
-            </article>
-          </div>
-        </div>
-        <div class="split-side">
-          <h2 class="section-title">Formatos que ofrecemos</h2>
-          <p class="side-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-        </div>
-      </div>
-
-      <div class="pay-block" id="pagos">
-        <h3>Métodos de pago</h3>
-        <p class="section-intro">Aceptamos los siguientes medios de pago:</p>
-        <ul class="pay-list">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Mercado Pago</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg>PayPal</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 5. ALGUNOS DE MIS TRABAJOS (carrusel + tarjeta superpuesta con título y descripción) -->
+    <!-- 4. ALGUNOS DE MIS TRABAJOS (carrusel + rectángulo blanco superpuesto) -->
     <section class="panel" id="trabajos">
-      <div class="split split--side-right split--overlap">
+      <div class="split">
 
         <div class="split-main">
           <div class="carousel" data-carousel tabindex="0" aria-roledescription="carrusel" aria-label="Galería de trabajos">
             <div class="carousel-track">
               <figure class="carousel-slide ph" data-label="Trabajo 1">
-                <img src="img/trabajo-1.jpg" alt="Trabajo 1" data-fallback>
+                <img src="assets/Proy-007-Ima-003.jpg" alt="Trabajo 1" data-fallback>
               </figure>
               <figure class="carousel-slide ph" data-label="Trabajo 2">
                 <img src="img/trabajo-2.jpg" alt="Trabajo 2" data-fallback>
@@ -129,6 +170,29 @@
               <figure class="carousel-slide ph" data-label="Trabajo 3">
                 <img src="img/trabajo-3.jpg" alt="Trabajo 3" data-fallback>
               </figure>
+
+              <!-- ============================================================
+                   CÓMO AGREGAR UN VIDEO AL CARRUSEL
+                   1) Copiá este bloque (sin los signos de comentario) dentro de
+                      .carousel-track, en la posición donde lo quieras.
+                   2) Copiá también un <article class="work-text" hidden> con su
+                      descripción en .works-text, en la MISMA posición.
+                   Los puntos y el bucle infinito se ajustan solos.
+
+                   Formatos: los navegadores NO reproducen .avi (ni en celular ni
+                   en escritorio). Podés dejar el .avi como respaldo, pero el
+                   video tiene que existir también en .mp4 (H.264/AAC) o .webm.
+                   Para convertirlo:
+                   ffmpeg -i trabajo.avi -c:v libx264 -c:a aac -movflags +faststart trabajo.mp4
+
+                   <figure class="carousel-slide ph" data-label="Video (video/trabajo.mp4)">
+                     <video controls playsinline preload="metadata" poster="img/trabajo-video.jpg" data-fallback>
+                       <source src="video/trabajo.mp4" type="video/mp4">
+                       <source src="video/trabajo.webm" type="video/webm">
+                       <source src="video/trabajo.avi" type="video/x-msvideo">
+                     </video>
+                   </figure>
+                   ============================================================ -->
             </div>
             <div class="carousel-controls">
               <button class="carousel-btn prev" type="button" aria-label="Imagen anterior">&#8249;</button>
@@ -138,19 +202,19 @@
           </div>
         </div>
 
-        <div class="split-side">
-          <h2 class="section-title">Algunos de mis trabajos</h2>
+        <div class="split-side rect-white">
+          <h2 class="display display--card">Algunos de mis <span class="hl">trabajos</span></h2>
           <div class="works-text" aria-live="polite">
             <article class="work-text">
-              <h3>Trabajo 1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Casa Les Mathes de Le Carbuisier</h4>
+              <p>Maqueta virtual de la vivienda vacacional diseñada por el arquitecto Le Corbusier en el año 1935</p>
             </article>
             <article class="work-text" hidden>
-              <h3>Trabajo 2</h3>
+              <h4>Trabajo 2</h4>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </article>
             <article class="work-text" hidden>
-              <h3>Trabajo 3</h3>
+              <h4>Trabajo 3</h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </article>
           </div>
@@ -159,28 +223,30 @@
       </div>
     </section>
 
-    <!-- 6. FOOTER / CONTACTO -->
+    <!-- 5. FOOTER / CONTACTO -->
     <footer class="panel site-footer" id="contacto">
       <div class="footer-top">
-        <h2 class="footer-title">Ante cualquier consulta, enviala a mi email o número de WhatsApp</h2>
+        <div class="footer-title-box rect-red">
+          <h2 class="footer-title">Ante cualquier consulta, enviala a mi email o número de WhatsApp</h2>
+        </div>
         <ul class="footer-info">
           <li>
             <span><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</span>
-            <a href="mailto:contacto@dgarender.com">contacto@dgarender.com</a>
+            <a href="mailto:diegogabrielalfaro@gmail.com">diegogabrielalfaro@gmail.com</a>
           </li>
           <li>
             <span><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</span>
-            <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
+            <a href="https://wa.me/5491165636172" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
           </li>
         </ul>
       </div>
 
       <div class="footer-social">
-        <h3>También podés encontrarme en...</h3>
-        <a class="social-link" href="https://instagram.com/dgarender" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>Instagram &middot; @dgarender</a>
+        <h3 class="subtitle subtitle--plain">También podés encontrarme en...</h3>
+        <a class="social-link" href="https://instagram.com/dgaplanos" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>Instagram &middot; @dgaplanos</a>
       </div>
 
-      <p class="copyright">&copy; <span id="year"></span> DGARENDER. Todos los derechos reservados.</p>
+      <p class="copyright">&copy; <span id="year"></span> DGA PLANOS. Todos los derechos reservados.</p>
     </footer>
 
   </div>
